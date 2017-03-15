@@ -1,0 +1,18 @@
+#
+# Zebedee server sample config file for tunnelling VNC traffic.
+#
+
+verbosity 1
+
+server true		# Yes, it's a server!
+detached true		# Convert to daemon if possible
+
+# Set up allowed VNC targets on localhost.
+# By default this only allows tunnels to ports 5900 and 5901.
+
+target localhost:5900-5901/tcp
+
+# Other parameters
+
+compression zlib:9	# Allow maximum Zlib compression
+keylength 256		# Allow key length up to 256 bits
